@@ -3,16 +3,17 @@ var app = angular.module('coderFriends', ['ngRoute']);
 app.config(function ($routeProvider) {
 	$routeProvider
 	.when('/home' , {
-		templateUrl: 'template/home.html',
+		templateUrl: 'templates/home.html',
 		controller: 'homeCtrl',
 		resolve: {
 			friendsArray: function(friendService){
 				return friendService.getFollowing();
+				
 			}
 		}
 	})
 	.when('/friend/:github_username', {
-		templateUrl: 'template/friend.html',
+		templateUrl: 'templates/friend.html',
 		controller: 'firendCtrl'
 	})
 	.otherwise({

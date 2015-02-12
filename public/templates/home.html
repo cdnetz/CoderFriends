@@ -1,1 +1,10 @@
 <h1> You're Home </h1>
+
+<p>
+	Here are your followers on github:
+</p>
+<div ng-repeat="friend in friends">
+	{{friend.login}}:
+	<br>
+	<img ng-src="{{friend.avatar_url}}">
+</div>

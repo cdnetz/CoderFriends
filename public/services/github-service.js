@@ -13,4 +13,4 @@ app.service('friendService', function ($http, $q) {
 		})
 		return deferred.promise;
 	}
-})
+});
